@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+
+        android:text="Zhumabek Ruslan"
+        android:fontFamily="sans-serif"
+        android:textSize="26sp"
+        android:background="#ffebee"
+        android:textColor="#f44336" />
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+
+        android:text="Satbayev"
+        android:textAllCaps="true"
+        android:textSize="26sp"
+        android:background="#ede7f6"
+        android:textColor="#7e57c2" />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+
+        android:text="Almaty"
+        android:textAlignment="viewEnd"
+        android:textSize="26sp"
+        android:background="#e8eaf6"
+        android:textColor="#5c6bc0"
+        tools:ignore="RtlCompat" />
+
+    <TextView android:id="@+id/display_message"
+        android:text="Посетите сайт https://ecomed.kz"
+        android:textSize="21sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoLink="web|email" />
+</LinearLayout>

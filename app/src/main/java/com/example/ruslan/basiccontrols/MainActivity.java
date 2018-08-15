@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -16,31 +17,43 @@ import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
-    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR1)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.button_layout);
+    }
 
+    public void sendMessage(View view) {
+        TextView textView = (TextView) findViewById(R.id.textView);
         EditText editText = (EditText) findViewById(R.id.editText);
-        editText.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                TextView textView = (TextView) findViewById(R.id.textView);
-                textView.setText(s);
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
+        textView.setText("Welcome, " + editText.getText());
+    }
+//    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR1)
+//    @Override
+//    protected void onCreate(Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//
+//        setContentView(R.layout.activity_main);
+//
+//        EditText editText = (EditText) findViewById(R.id.editText);
+//        editText.addTextChangedListener(new TextWatcher() {
+//            @Override
+//            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+//
+//            }
+//
+//            @Override
+//            public void onTextChanged(CharSequence s, int start, int before, int count) {
+//                TextView textView = (TextView) findViewById(R.id.textView);
+//                textView.setText(s);
+//            }
+//
+//            @Override
+//            public void afterTextChanged(Editable s) {
+//
+//            }
+//        });
 
 //        LinearLayout linearLayout = new LinearLayout(this);
 //        TextView textView1 = new TextView(this);
@@ -69,5 +82,5 @@ public class MainActivity extends AppCompatActivity {
 ////        setContentView(linearLayout);
 //
 //        setContentView(R.layout.activity_main);
-    }
+//    }
 }
